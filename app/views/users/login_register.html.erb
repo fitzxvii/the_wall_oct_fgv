@@ -1,0 +1,26 @@
+<div class="login-page">
+    <h1>Welcome to the Wall of Fitz!</h1>
+    <form id="register_form" class="login-register" action="/register" method="POST" data-is_processing="0">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <h2>Register Here:</h2>
+        <p><label>Email: </label> <input type="email" name="email" id="register_email_input"></p>
+        <p class="error_msg hidden" id="register_email_error_msg"> Error</p>
+        <p><label>First Name: </label> <input type="text" name="first_name" id="first_name_input"></p>
+        <p class="error_msg hidden" id="first_name_error_msg"> Error</p>
+        <p><label>Last Name: </label> <input type="text" name="last_name" id="last_name_input"></p>
+        <p class="error_msg hidden" id="last_name_error_msg"> Error</p>
+        <p><label>Password: </label> <input type="password" name="password" id="register_password_input"></p>
+        <p class="error_msg hidden" id="register_password_error_msg"> Error</p>
+        <p><label>Confirm Password: </label> <input type="password" name="confirm_password" id="confirm_password_input"></p>
+        <p class="error_msg hidden" id="confirm_password_error_msg"> Error</p>
+        <input class="submit" type="submit" value="Register!">
+    </form>
+    <form id="login_form" class="login-register" action="/login" method="POST" data-is_processing="0">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <h2>Login Here:</h2>
+        <p><label>Email: </label> <input type="email" name="email" id="login_email_input"></p>
+        <p><label>Password: </label> <input type="password" name="password" id="login_password_input"></p>
+        <p class="error_msg hidden" id="login_error_msg"> Error</p>
+        <input class="submit" type="submit" value="Login!">
+    </form>
+</div>
