@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+    before_action :is_user_available?
+
     # DOCU: Create a new comment below the message made by current user
     # Triggered by: (POST) /post_comment
     # Session: session - user_id

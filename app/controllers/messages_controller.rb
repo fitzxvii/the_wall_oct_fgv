@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+    before_action :is_user_available?
+
     # DOCU: The main page of the Wall
     # Triggered by: (GET) /main
     # Returns: @all_messages
